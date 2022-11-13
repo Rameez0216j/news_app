@@ -8,8 +8,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
               integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
               crossorigin="anonymous">
-              <link rel="stylesheet" href="./Css/owl.carousel.css">
-              <link rel="stylesheet" href="./Css/main.css">
+        <link rel="stylesheet" href="./Css/owl.carousel.css">
+        <link rel="stylesheet" href="./Css/main.css">
         <link rel="stylesheet" href="./Css/owl.theme.green.css">
         
     </head>
@@ -19,7 +19,7 @@
         <!-- dark classes "bg-dark navbar-dark"-->
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark"> 
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">NEWS++</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                       aria-expanded="false" aria-label="Toggle navigation">
@@ -31,38 +31,45 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                   aria-expanded="false">
-                                Dropdown
+                                Categories
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Politics</a></li>
+                                <li><a class="dropdown-item" href="#">Movies</a></li>
+                                <li><a class="dropdown-item" href="#">Sports</a></li>
+                                <li><a class="dropdown-item" href="#">Finance</a></li>
+                                <li><a class="dropdown-item" href="#">Technology</a></li>
+                                <li><a class="dropdown-item" href="#">Science</a></li>
+                                <li><a class="dropdown-item" href="#">Medical</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="#">Contact Us</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
                         </li>
                     </ul>
                     <div class="d-flex" role="search">
                         <input id="search_text" class="form-control me-2" placeholder="Search" aria-label="Search">
-                        <button id="search_button" class="btn btn-outline-success">Search</button>
+                        <button id="search_button" class="btn btn-outline-danger">Search</button>
                     </div>
                 </div>
             </div>
         </nav>
         <!-- navbar end -->
         <div class="container">
-            <h2 class="text-center my-3 mt-4">FAST NEWS</h2>
+            <div class="d-flex justify-content-end form-switch my-2">
+                <input class="form-check-input" type="checkbox" role="switch" id="mode" unchecked>
+                <label id="mode_type" class="form-check-label mx-3"  for="mode">Light Mode</label>
+            </div>
+            <h2 class="text-center my-3 mt-4">TOP NEWS</h2>
             <hr>
-            <div class="owl-carousel owl-theme align-content-center justify-content-center" id="news_body">
+            <div class="row align-content-center justify-content-center" id="news_body">
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -72,20 +79,12 @@
         <script src="./js/main.js"></script>
         <script src="./js/owl.carousel.js"></script>
         <script>
-            $('.owl-carousel').owlCarousel({
-                nav:true,
-                responsive:{
-                    0:{
-                        items:1
-                    },
-                    600:{
-                        items:2
-                    },
-                    1000:{
-                        items:4
-                    }
-                }
-            })
+            $(document).ready(function () {
+                $('.owl-carousel').owlCarousel({
+                    nav:true,
+                    items:4
+                });
+            });
         </script>
         
     </body>
